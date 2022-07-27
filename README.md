@@ -43,7 +43,7 @@ To rerun RESCAL, ComplEx, DistMult, TrasnE, and RotatE:
 
 To rerun HAKE:
 1. Move to [`./KGE-HAKE`](./KGE-HAKE)
-2. Run setting files at `./KGE-HAKE/settings/` for each model.
+2. Run setting files at [`./KGE-HAKE/settings/`](./KGE-HAKE/settings) for each model.
 3. After the training, you can test trained models by running [`./KGE-HAKE/eval.sh`](./KGE-HAKE/eval.sh).
   - The evaluation results are stored in `test.log` of each model directory.
 
@@ -52,20 +52,20 @@ To rerun HAKE:
 #### RESCAL, ComplEx, DistMult, TrasnE, and RotatE in [`./KnowledgeGraphEmbedding`](./KnowledgeGraphEmbedding)
 
 You can run the following scripts:
-- `run.sh` trains a model using the self-adversarial negative sampling (SANS) loss function.
-- `run_wo_adv.sh` trains a model using the NS loss in Eq. (3) in our paper with uniform noise.
-- `run_wo_adv_sum.sh` trains a model using the NS loss in Eq. (2) in our paper with uniform noise.
+- [`run.sh`](./KnowledgeGraphEmbedding/run.sh) trains a model using the self-adversarial negative sampling (SANS) loss function.
+- [`run_wo_adv.sh`](./KnowledgeGraphEmbedding/run_wo_adv.sh) trains a model using the NS loss in Eq. (3) in our paper with uniform noise.
+- [`run_wo_adv_sum.sh`](./KnowledgeGraphEmbedding/run_wo_adv_sum.sh) trains a model using the NS loss in Eq. (2) in our paper with uniform noise.
 
-The above scripts conduct testing after the final epoch of the training.
+The above scripts conduct testing after the final epoch of the training. Note that this result is on the model obtained through the last training epoch. If you need to evaluate the model that achieved the best validation MRR, please use the method described in [Testing Models](#testing_models).
 
 #### HAKE in [`./KGE-HAKE`](./KGE-HAKE)
 
 You can run the following scripts:
-- `runs.sh` trains a model using the self-adversarial negative sampling (SANS) loss function.
-- `runs_wo_adv.sh` trains a model using the NS loss in Eq. (3) in our paper with uniform noise.
-- `runs_wo_adv_sum.sh` trains a model using the NS loss in Eq. (2) in our paper with uniform noise.
+- [`runs.sh`](./KGE-HAKE/runs.sh) trains a model using the self-adversarial negative sampling (SANS) loss function.
+- [`runs_wo_adv.sh`](./KGE-HAKE/runs_wo_adv.sh) trains a model using the NS loss in Eq. (3) in our paper with uniform noise.
+- [`runs_wo_adv_sum.sh`](./KGE-HAKE/runs_wo_adv_sum.sh) trains a model using the NS loss in Eq. (2) in our paper with uniform noise.
 
-The above scripts conduct testing after the final epoch of the training.
+The above scripts conduct testing after the final epoch of the training. Note that this result is on the model obtained through the last training epoch. If you need to evaluate the model that achieved the best validation MRR, please use the method described in [Testing Models](#testing_models).
 
 #### Subsampling
 
@@ -74,7 +74,7 @@ In the training scripts of both [`./KnowledgeGraphEmbedding`](./KnowledgeGraphEm
 - `--freq_based_subsampling`: Frequency-based subsampling described in Eq. (12) of our paper.
 - `--uniq_based_subsampling`: Unique-based subsampling described in Eq. (13) of our paper.
 
-### Testing Models
+### <a id="testing_models"></a>Testing Models
 
 #### RESCAL, ComplEx, DistMult, TrasnE, and RotatE in [`./KnowledgeGraphEmbedding`](./KnowledgeGraphEmbedding)
 
@@ -92,4 +92,4 @@ python -u codes/runs.py --do_test --cuda -init ${MODEL_DIRECTORY}
 
 ### Other Details
 
-Other options are described in `./KGE-HAKE/README.md` and `./KnowledgeGraphEmbedding/README.md`.
+Other options are described in [`./KGE-HAKE/README.md`](./KGE-HAKE/README.md) and [`./KnowledgeGraphEmbedding/README.md`](./KnowledgeGraphEmbedding/README.md).

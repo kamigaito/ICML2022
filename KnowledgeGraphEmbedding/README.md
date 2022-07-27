@@ -31,16 +31,16 @@ pip install -r requirements.txt
 
 ### Reproducing our results
 
-Run setting files at `./settings/` for each model.
+Run setting files at [`./settings/`](./settings) for each model.
 
 ### Training models
 
 You can run the following scripts:
-- `run.sh` trains a model using the self-adversarial negative sampling (SANS) loss function.
-- `run_wo_adv.sh` trains a model using the NS loss in Eq. (3) in our paper with uniform noise.
-- `run_wo_adv_sum.sh` trains a model using the NS loss in Eq. (2) in our paper with uniform noise.
+- [`run.sh`](./run.sh) trains a model using the self-adversarial negative sampling (SANS) loss function.
+- [`run_wo_adv.sh`](./run_wo_adv.sh) trains a model using the NS loss in Eq. (3) in our paper with uniform noise.
+- [`run_wo_adv_sum.sh`](./run_wo_adv_sum.sh) trains a model using the NS loss in Eq. (2) in our paper with uniform noise.
 
-The above scripts conduct testing after the final epoch of the training.
+The above scripts conduct testing after the final epoch of the training. Note that this result is on the model obtained through the last training epoch. If you need to evaluate the model that achieved the best validation MRR, please use the method described in [Testing Models](#testing_models).
 
 #### Subsampling
 
@@ -49,7 +49,7 @@ You can use subsampling described in our paper by the following options:
 - `--freq_based_subsampling`: Frequency-based subsampling described in Eq. (12) of our paper.
 - `--uniq_based_subsampling`: Unique-based subsampling described in Eq. (13) of our paper.
 
-### Testing Models
+### <a id="testing_models"></a>Testing Models
 
 You can test a trained model in `${MODEL_DIRECTORY}` by using the following command:
 ```
