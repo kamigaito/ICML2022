@@ -109,3 +109,6 @@ config.json
 *.log
 *.pyc
 *.swp
+
+# MacOS
+.DS_Store

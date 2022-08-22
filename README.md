@@ -13,7 +13,7 @@ This repository includes our code used in the following paper \([arXiv](https://
   copyright = {arXiv.org perpetual, non-exclusive license}
 }
 ```
-Note that [our original paper at PMLR](https://proceedings.mlr.press/v162/kamigaito22a.html) wrongly drops |D| in Eq. (10), (12), and (13) by typos. Please see [the latest arXiv version of our paper](https://arxiv.org/abs/2206.10140) to understand our work.
+Note that [our original paper at PMLR](https://proceedings.mlr.press/v162/kamigaito22a.html) wrongly drops |D| in Eq. (10), (12), and (13) by typos ([erratum](https://www.researchgate.net/publication/362470765_Erratum_to_Comprehensive_Analysis_of_Negative_Sampling_in_Knowledge_Graph_Representation_Learning)). Please see [the latest arXiv version of our paper](https://arxiv.org/abs/2206.10140) to understand our work.
 
 We modified [KGE-HAKE](https://github.com/MIRALab-USTC/KGE-HAKE.git) \([Zhang et al., 2020](https://arxiv.org/abs/1911.09419)\) and [KnowledgeGraphEmbedding](https://github.com/DeepGraphLearning/KnowledgeGraphEmbedding.git) \([Sun et al., 2019](https://openreview.net/forum?id=HkgEQnRqYQ)\) to implement our code.
 
